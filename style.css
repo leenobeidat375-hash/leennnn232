@@ -345,7 +345,109 @@ img{
   }
 
 }
+/* ===== Packages ===== */
 
+.packages-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.package{
+  display:flex;
+  flex-direction:column;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:25px;
+  height:100%;
+}
+
+.package-head{
+  margin-bottom:12px;
+}
+
+.package-meta{
+  margin-top:auto;
+}
+
+/* ===== Package Buttons ===== */
+
+.package-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
+}
+
+.package-actions .btn{
+  flex:1 1 auto;
+  min-width:110px;
+}
+
+/* زر أساسي */
+
+.package-actions .btn-primary{
+  background:var(--primary);
+  color:white;
+}
+
+.package-actions .btn-primary:hover{
+  background:var(--primary-2);
+}
+
+/* زر ثانوي */
+
+.package-actions .btn-secondary{
+  background:#C9A76B20;
+  color:var(--text);
+}
+
+/* زر شفاف */
+
+.package-actions .btn-ghost{
+  background:transparent;
+  border:1px solid var(--border);
+  color:var(--text);
+}
+
+/* ===== CTA Buttons ===== */
+
+.section-foot{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.section-foot .btn{
+  padding:14px 24px;
+}
+
+/* ===== Mobile Fix ===== */
+
+@media (max-width:900px){
+
+  .packages-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media (max-width:600px){
+
+  .packages-grid{
+    grid-template-columns:1fr;
+  }
+
+  .package-actions{
+    flex-direction:column;
+  }
+
+  .package-actions .btn{
+    width:100%;
+  }
+
+}
 
 
 
